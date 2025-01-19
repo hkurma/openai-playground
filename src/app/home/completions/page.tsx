@@ -14,7 +14,7 @@ import {
   Textarea,
 } from '@/components/ui';
 import openai from '@/lib/openai';
-import { Send, XCircle } from 'lucide-react';
+import { ArrowUpRight, Send, XCircle } from 'lucide-react';
 import { Input } from '@/components/ui';
 
 const models = [
@@ -54,7 +54,7 @@ const Completions = () => {
       })
       .then((response) => {
         const completionText = response.choices[0].text.trim();
-        setText((prevText) => `${prevText}\n\n${completionText}`);
+        setText((prevText) => `${prevText} ${completionText}`);
       })
       .catch((err) => {
         setErrorMessage(err.message);
@@ -171,6 +171,13 @@ const Completions = () => {
             }
           />
         </div>
+        <a
+          href="https://platform.openai.com/docs/guides/completions"
+          target="_blank"
+          className="text-blue-500 flex items-center gap-1"
+        >
+          Learn more about text generation <ArrowUpRight size={16} />
+        </a>
       </div>
     </div>
   );
