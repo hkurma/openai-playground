@@ -53,8 +53,8 @@ const Completions = () => {
         presence_penalty: options.presencePenalty,
       })
       .then((response) => {
-        const completionText = response.choices[0].text.trim();
-        setText((prevText) => `${prevText} ${completionText}`);
+        const completionText = response.choices[0].text;
+        setText((prevText) => `${prevText}${completionText}`);
       })
       .catch((err) => {
         setErrorMessage(err.message);
@@ -74,6 +74,12 @@ const Completions = () => {
             placeholder="Enter your text or prompt here..."
             value={text}
             onChange={(e) => setText(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.ctrlKey && e.key === 'Enter') {
+                e.preventDefault(); // Prevents new line insertion
+                handleSend();
+              }
+            }}
           />
           {pendingCompletion && <Text>Loading...</Text>}
           {errorMessage && (
