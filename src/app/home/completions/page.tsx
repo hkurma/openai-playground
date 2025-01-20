@@ -67,7 +67,7 @@ const Completions = () => {
   return (
     <div className="h-full w-full flex overflow-hidden px-4 py-6 gap-4">
       <div className="flex-1 flex flex-col gap-4">
-        <div className="flex-1 flex flex-col gap-4 overflow-auto">
+        <div className="flex-1 flex flex-col gap-4">
           <Textarea
             name="text"
             className="flex-1 resize-none h-full"
