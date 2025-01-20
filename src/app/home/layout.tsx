@@ -29,6 +29,10 @@ const menus: Menu[] = [
     path: '/home/images',
   },
   {
+    name: 'Whisper',
+    path: '/home/whisper',
+  },
+  {
     name: 'Assistants',
     path: '/home/assistants',
   },
