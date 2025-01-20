@@ -20,7 +20,7 @@ import { ArrowUpRight, XCircle, UploadCloud } from 'lucide-react';
 const models = [{ name: 'whisper-1' }, { name: 'whisper-2' }];
 
 const WhisperTranscription = () => {
-  const [selectedModel, setSelectedModel] = useState<string>(models[0].name);
+  const [selectedModel] = useState<string>(models[0].name);
   const [audioFile, setAudioFile] = useState<File | null>(null);
   const [transcription, setTranscription] = useState<string>('');
   const [errorMessage, setErrorMessage] = useState<string>('');
@@ -73,26 +73,6 @@ const WhisperTranscription = () => {
 
   return (
     <div className="h-full w-full flex flex-col gap-6 p-6">
-      <div className="flex flex-col gap-4">
-        <Label>Model</Label>
-        <Select
-          name="model"
-          value={selectedModel}
-          onValueChange={setSelectedModel}
-        >
-          <SelectTrigger>
-            <SelectValue placeholder="Select a model" />
-          </SelectTrigger>
-          <SelectContent>
-            {models.map((model, index) => (
-              <SelectItem key={index} value={model.name}>
-                {model.name}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
-
       <div className="flex flex-col gap-4">
         <Label>Response Format</Label>
         <Select

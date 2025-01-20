@@ -268,7 +268,7 @@ const Completions = () => {
           target="_blank"
           className="flex items-center gap-1"
         >
-          Learn more about text generation <ArrowUpRight size={16} />
+          Learn more about text completions <ArrowUpRight size={16} />
         </a>
       </div>
     </div>
