@@ -13,6 +13,10 @@ type Menu = { name: string; path: string; target?: HTMLAttributeAnchorTarget };
 
 const menus: Menu[] = [
   {
+    name: 'Completion',
+    path: '/home/completion',
+  },
+  {
     name: 'Text',
     path: '/home/text',
   },
@@ -23,6 +27,10 @@ const menus: Menu[] = [
   {
     name: 'Images',
     path: '/home/images',
+  },
+  {
+    name: 'Whisper',
+    path: '/home/whisper',
   },
   {
     name: 'Assistants',

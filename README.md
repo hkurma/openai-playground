@@ -2,14 +2,16 @@
 
 Playground app for OpenAI API's and more. Use your own OpenAI API Key. Your API Key is stored and used only from your browser.
 
-[Playground Plus App](https://openai-playground-plus.vercel.app)
+[Playground Plus App](https://openai-playground-plus-immineal.vercel.app)
 
 ## API's
 
 These OpenAI API's are currently supported in the playground.
 
 - Text Generation
+- Text Completion
 - Vision
+- Audio Transcription
 - Image Generation
 - Assistants
 - Moderations
