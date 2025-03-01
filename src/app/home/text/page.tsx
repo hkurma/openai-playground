@@ -25,10 +25,15 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 const models = [
-  { name: 'gpt-4.5' },
   { name: 'gpt-4o' },
-  { name: 'gpt-4-turbo' },
-  { name: 'gpt-3.5-turbo-1106' },
+  { name: 'gpt-4o-mini' },
+  { name: 'gpt-4.5-preview' },
+  { name: 'o1' },
+  { name: 'o1-mini' },
+  { name: 'o3-mini' },
+  { name: 'gpt-4o-realtime-preview' },
+  { name: 'gpt-4o-mini-realtime-preview' },
+  { name: 'gpt-4o-audio-preview' },
 ];
 
 const TextGeneration = () => {
